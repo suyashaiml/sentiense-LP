@@ -1,0 +1,14 @@
+services:
+  sentiense-web:
+    container_name: sentiense-web
+    build: .
+    restart: unless-stopped
+    expose:
+      - "80"
+    networks:
+      - web
+
+networks:
+  web:
+    external: true
+
